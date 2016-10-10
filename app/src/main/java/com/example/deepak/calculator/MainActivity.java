@@ -1,7 +1,12 @@
 package com.example.deepak.calculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ShareActionProvider;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView txtresult;
 
     double data1, data2, result, result2, result3, result4, result5, result6, result7;
+
+
 
 
     @Override
@@ -32,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         power1 = (Button) findViewById(R.id.btn_power2);
         power2 = (Button) findViewById(R.id.btn_power1);
-
 
 
         txtresult = (TextView) findViewById(R.id.txt_result);
@@ -126,4 +132,41 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-}
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        // Return true to display menu
+        return true;
+    }
+
+
+
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+
+                switch (item.getItemId()) {
+                    case R.id.about:
+                        startActivity(new Intent(this, AboutusActivity.class));
+                        return true;
+
+                    case R.id.shareapp :
+                        sharingButton();
+
+
+                    default:
+                        return super.onOptionsItemSelected(item);
+                }
+        }
+
+    private void sharingButton(){
+        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+        startActivity(intent);
+    }
+
+
+
+  }
+
