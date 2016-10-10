@@ -2,13 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c8bd55"
     android:orientation="vertical"
-    android:padding="4dp">
+    android:padding="5dp">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="390dp"
+        android:layout_height="460dp"
         android:background="@drawable/dk"/>
 
     <LinearLayout
@@ -18,76 +17,30 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView2"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#9dd22be4"
             android:gravity="center"
             android:text="Developer and Designer"
-            android:textColor="#202221"
+            android:textColor="#d8a436"
             android:textSize="22sp" />
 
         <View
             android:layout_width="250dp"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_gravity="center_horizontal"
             android:background="#c7befa"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#9dd22be4"
             android:gravity="center"
             android:text="Deepak Kumar"
-            android:textColor="#202221"
-            android:textSize="20sp"
+            android:textColor="#df291c"
+            android:textSize="18sp"
             />
-        <View
-            android:layout_width="150dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center_horizontal"
-            android:background="#e1e1e1"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
 
-            android:layout_marginTop="1dp"
-            android:background="#321">
-
-           <ImageView
-               android:layout_width="17dp"
-               android:layout_height="38dp"
-               android:layout_gravity="center"
-               android:layout_weight="1"
-               android:background="@drawable/giticon"/>
-
-            <ImageView
-                android:layout_width="17dp"
-                android:layout_height="38dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/fb"/>
-
-            <ImageView
-                android:layout_width="17dp"
-                android:layout_height="38dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/linked"/>
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="38dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/twitter"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

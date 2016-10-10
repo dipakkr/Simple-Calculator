@@ -9,6 +9,7 @@
         android:supportsRtl="true"
        >
         <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutusActivity"
-                   android:theme="@style/NoActionBar">
+                  android:screenOrientation="portrait"
+                  android:theme="@style/NoActionBar">
 
         </activity>
 

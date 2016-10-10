@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     double data1, data2, result, result2, result3, result4, result5, result6, result7;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,21 +126,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
-
-
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         // Return true to display menu
         return true;
     }
-
-
-
-
     public boolean onOptionsItemSelected(MenuItem item) {
 
 
@@ -160,12 +149,15 @@ public class MainActivity extends AppCompatActivity {
                         return super.onOptionsItemSelected(item);
                 }
         }
-
     private void sharingButton(){
         Intent intent = new Intent(android.content.Intent.ACTION_SEND);
-        startActivity(intent);
-    }
+        intent.setType("text/plain");
+        String share = "Here is the share body";
+        intent.putExtra(Intent.EXTRA_SUBJECT,"Here is the extra subject");
+        intent.putExtra(Intent.EXTRA_TEXT,"type here");
+        startActivity(Intent.createChooser(intent,"Share Via "));
 
+    }
 
 
   }
